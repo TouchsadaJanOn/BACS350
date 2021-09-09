@@ -5,7 +5,7 @@ class IndexView(TemplateView):
 
 
 class SpiderManView(TemplateView):
-    template_name = 'hero.html'
+    template_name = 'spiderman.html'
 
     def get_context_data(self, **kwargs):
         return { 
@@ -14,7 +14,7 @@ class SpiderManView(TemplateView):
             'image': '/static/images/spiderman.jpg' }
 
 class AquaManView(TemplateView):
-    template_name = "hero.html"
+    template_name = "aquaman.html"
 
     def get_context_data(self, **kwargs):
         return { 'hero': 'aquaman',
