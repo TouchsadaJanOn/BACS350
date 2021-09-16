@@ -1,5 +1,8 @@
+{% extends 'superhero_theme.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
+{% block content %}
 
 <head>
     <meta charset="UTF-8">
@@ -9,22 +12,33 @@
     <link rel="stylesheet" href="/static/super.css">
 </head>
 
+
 <body>
     <header>
         <div class="row">
             <div class="col-6">
-                <h1>Superhero Gallery</h1>
+                <h1>Superhero News</h1>
             </div>
             <div class="col-3">
-                <img src="/static/images/Bear.png" alt="UNC Bear">
+                <img src="/static/images/marvel.jpg" alt="marvel">
             </div>
         </div>
     </header>
 
-    <main>
-        <p><a href="/hero/">List of Heroes</a></p>
-        <p><a href="/admin/">Admin Views for Superhero</a></p>
-    </main>
+    <div class='center'>
+        <!-- <p><a href="/hero/">List of Heroes (Not Ready in Python Anywhere)</a>
+        <p>
+        <p><a href="/admin/">Admin Views for Superhero (Not fully functioning in Python Anywhere)</a></p> -->
+        <!-- Project 4 -->
+        <p><a href="hero/spiderman">spiderman Profile</a></p>
+        <p></p><a href="hero/aquaman">Aqua-Man Profile</a></p>
+        <p></p><a href="hero/batman">Batman Profile</a></p>
+        <p></p><a href="hero/deadpool">Deadpool Profile</a></p>
+        <p></p><a href="hero/captain">Captain America Profile</a></p>
+    </div>
+
+    <p>Using extend index to superhero_theme</p>
+    {% endblock%}
 
 </body>
 
