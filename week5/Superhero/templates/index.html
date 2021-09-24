@@ -1,0 +1,28 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+
+<header>
+    <h1
+        class="display-2 text-monospace font-weight-bold text-capitalize text-light bg-success text-left mt-2 ml-4 mr-4 ">
+        Superhero News</h1>
+</header>
+<main>
+    <div class="text-left mb-3 ml-4">
+        <img src="/static/images/marvel.jpg" class='round' alt="marvel">
+    </div>
+    <p class='text-left ml-4'><a href="/hero/">List of Heroes</a></p>
+    <p class='text-left ml-4'><a href="/admin/">Admin Views for Superhero</a></p>
+    <ul>
+        <p><u><b>List of my Superhero</b></u></p>
+        {% for hero in object_list %}
+        <li>
+            <p>
+                <a href="/hero/{{ hero.pk }}">{{ hero.name }}</a>
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
+</main>
+
+{% endblock content %}
