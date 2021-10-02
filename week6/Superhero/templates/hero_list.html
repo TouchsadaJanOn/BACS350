@@ -14,7 +14,7 @@
                 <a href="/hero/{{ hero.pk}}/delete" class="btn btn-danger ml-1">Delete Superhero</a>
             </h2>
             <p> Identity: {{ hero.identity }}</p>
-            <p>Link: <a href=" {{ hero.pk }}">{{ hero.name }}</a></p>
+            <p>Details: <a href=" {{ hero.pk }}">{{ hero.name }}</a></p>
             <p><img src="{{ hero.image }}" alt="{{ hero.name }}" width=300> </p>
         </li>
         {% endfor %}
