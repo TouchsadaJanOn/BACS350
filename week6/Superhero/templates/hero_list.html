@@ -1,0 +1,28 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+
+<div class='text-left'>
+    <h1>My Superhero List </h1>
+    <!-- <a href="" class="btn btn-warning m-5">Home</a> -->
+    <a href="/hero/add" class="btn btn-success m-5">Add New Superhero</a>
+    <ul>
+        {% for hero in object_list %}
+        <li>
+            <h2>Name: {{ hero.name }}
+                <a href="/hero/{{ hero.pk}}/" class="btn btn-primary ml-3">Edit Superhero</a>
+                <a href="/hero/{{ hero.pk}}/delete" class="btn btn-danger ml-1">Delete Superhero</a>
+            </h2>
+            <p> Identity: {{ hero.identity }}</p>
+            <p>Link: <a href=" {{ hero.pk }}">{{ hero.name }}</a></p>
+            <p><img src="{{ hero.image }}" alt="{{ hero.name }}" width=300> </p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- <a href="/book/add" class="btn btn-success m-5">Add New Book</a> -->
+
+
+
+{% endblock content %}
