@@ -16,7 +16,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from hero.views import IndexView, HeroListView, HeroDetailView, HeroCreateView, HeroUpdateView, HeroDeleteView, HeroView
+from django.views.generic import RedirectView
+from hero.views import IndexView, HeroListView, HeroDetailView, HeroCreateView, HeroUpdateView, HeroDeleteView
+from django.urls.conf import include, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +30,8 @@ urlpatterns = [
     path('hero/<int:pk>/', HeroUpdateView.as_view(),  name='superhero_edit'),
     path('hero/<int:pk>/delete', HeroDeleteView.as_view(),  name='superhero_delete'),
 
+    # User account urls
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('', RedirectView.as_view(url='accounts/'), name='home'),
 ]
