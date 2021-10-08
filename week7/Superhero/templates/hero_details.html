@@ -1,0 +1,18 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+
+<h1>My Superhero Details</h1>
+<a href="/hero/{{ hero.pk}}/" class="btn btn-primary ml-3">Edit Superhero</a>
+<a href="/hero/{{ hero.pk}}/delete" class="btn btn-danger ml-1">Delete Superhero</a>
+<h2>Name: {{ hero.name }}</h2>
+<p>Identity: {{ hero.identity }}</p>
+<p>Description: {{ hero.description }}</p>
+<p>Strength: {{ hero.strength }}</p>
+<p>Weakness: {{ hero.weakness }}</p>
+<p><img src="{{ hero.image }}" alt="{{ hero.name }}" width=500>
+</p>
+
+<p><a href="/hero/" class="btn btn-danger ml-1">Back</a></p>
+
+{% endblock content %}
