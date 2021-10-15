@@ -15,16 +15,16 @@ class SignUpView(CreateView):
     template_name = 'registration/signup.html'
 
 
-class AccountView(RedirectView):
+class AccountView(LoginRequiredMixin, RedirectView):
     url = '/accounts/'
 
 
-class AccountListView(ListView):
+class AccountListView(LoginRequiredMixin, ListView):
     template_name = 'account_list.html'
     model = User
 
 
-class AccountDetailView(DetailView):
+class AccountDetailView(LoginRequiredMixin, DetailView):
     template_name = 'account_detail.html'
     model = User
 
