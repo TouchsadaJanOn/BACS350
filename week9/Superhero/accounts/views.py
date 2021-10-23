@@ -13,6 +13,8 @@ class SignUpView(CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
+    # model = User
+    #fields = ['first_name', 'last_name', 'username', 'email']
 
 
 class AccountView(LoginRequiredMixin, RedirectView):
@@ -32,14 +34,14 @@ class AccountDetailView(LoginRequiredMixin, DetailView):
 class AccountCreateView(LoginRequiredMixin, CreateView):
     template_name = "account_add.html"
     model = User
-    fields = ['first_name', 'last_name', 'username', 'email']
+    fields = ['first_name', 'last_name', 'username', 'password', 'email']
     success_url = reverse_lazy('account_list')
 
 
 class AccountUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "account_edit.html"
     model = User
-    fields = ['first_name', 'last_name', 'username', 'email']
+    fields = ['first_name', 'last_name', 'username', 'password', 'email']
     success_url = reverse_lazy('account_list')
 
 
