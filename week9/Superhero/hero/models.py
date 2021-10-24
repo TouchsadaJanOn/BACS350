@@ -22,8 +22,9 @@ class Superhero(models.Model):
 class Article(models.Model):
     # pointer to Superhero object
     hero = models.CharField(max_length=20, default='none')
-    order = models.IntegerField  # superhero order
-    title = models.CharField(max_length=200)  # title text of the superhero
+    order = models.IntegerField()  # superhero order
+    # title text of the superhero
+    title = models.CharField(max_length=200)
     markdown = models.TextField()  # markdown text
     html = models.TextField()
 
