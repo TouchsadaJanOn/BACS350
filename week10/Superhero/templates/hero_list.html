@@ -1,0 +1,46 @@
+{% extends 'superhero_theme.html' %}
+
+
+{% block content %}
+<div class='container-fluid m-3'>
+    <h1 class='text-left border-bottom border-danger border-5'>Superhero List</h1>
+    <!-- <a href=".." class="btn btn-warning mr-3">Home</a>
+    <a href="/hero/add" class="btn btn-success m-5">Add New Superhero</a> -->
+
+
+    <div class='text-left mt-2'>
+        <table class="table table-bordered table-dark mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Identity</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Strength</th>
+                    <th scope="col">Weakness</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            {% for hero in object_list %}
+            </h2>
+            <tbody>
+                <td> {{ hero.name }}</td>
+                <td> {{ hero.identity }}</td>
+                <td> <img src="{{ hero.image }}" alt="{{ hero.name }}" width=300></td>
+                <td> {{ hero.description }}</td>
+                <td> {{ hero.strength }}</td>
+                <td> {{ hero.weakness }}</td>
+                <td><a href=" {{ hero.pk }}" class="btn btn-primary m-2">Detail</a>
+                    <a href="/hero/{{ hero.pk}}/" class="btn btn-info m-2">Edit</a>
+                    <a href="/hero/{{ hero.pk}}/delete" class="btn btn-danger m-2">Delete</a>
+                </td>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+<!-- <a href="/book/add" class="btn btn-success m-5">Add New Book</a> -->
+
+
+
+{% endblock content %}

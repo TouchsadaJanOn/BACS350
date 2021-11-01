@@ -1,0 +1,35 @@
+{% extends 'superhero_theme.html' %}
+
+
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <h1 class="text-light text-center mt-2">List of Articles</h1>
+
+    <table class="table table-bordered text-light">
+        <tr>
+            <th>Superhero</th>
+            <th>Article</th>
+            <th>Edit</th>
+        </tr>
+
+        {% for article in object_list %}
+        <tr class='text-light'>
+            <td>{{ article.hero }}</td>
+            <td><a href="{{ article.pk }}">Article {{ article.order }} - {{ article.title }}</a></td>
+            <td><a href="{{ article.pk }}/">Edit</a></td>
+            <td><a href="{{ article.pk }}/delete">Delete</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <p>
+        <a href="/article/add" class="btn btn-success m-5">Add New Article</a>
+    </p>
+
+</div>
+
+{% endblock content %}
