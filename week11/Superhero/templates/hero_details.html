@@ -1,0 +1,44 @@
+{% extends 'superhero_theme.html' %}
+
+
+{% block content %}
+<h1>My Superhero Details</h1>
+<div class='text-left m-3'>
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Identity</th>
+                <th scope="col">Image</th>
+                <th scope="col">Description</th>
+                <th scope="col">Strength</th>
+                <th scope="col">Weakness</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td> {{ hero.name }}</td>
+            <td> {{ hero.identity }}</td>
+            <td> <img src="{{ hero.image }}" alt="{{ hero.name }}" width=300></td>
+            <td> {{ hero.description }}</td>
+            <td> {{ hero.strength }}</td>
+            <td> {{ hero.weakness }}</td>
+            <td>
+                <!-- <a href=" {{ hero.pk }}" class="btn btn-primary m-2">Detail</a> -->
+                <a href="/hero/{{ hero.pk}}/" class="btn btn-info m-2">Edit</a>
+                <a href="/hero/{{ hero.pk}}/delete" class="btn btn-danger m-2">Delete</a>
+            </td>
+
+        </tbody>
+        <!-- <h2>Name: {{ hero.name }}</h2>
+<p>Identity: {{ hero.identity }}</p>
+<p>Description: {{ hero.description }}</p>
+<p>Strength: {{ hero.strength }}</p>
+<p>Weakness: {{ hero.weakness }}</p>
+<p><img src="{{ hero.image }}" alt="{{ hero.name }}" width=500>
+</p> -->
+
+
+        <a href="/hero/" class="btn btn-danger m-3">Back</a>
+</div>
+{% endblock content %}
