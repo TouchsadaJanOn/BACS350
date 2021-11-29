@@ -1,0 +1,41 @@
+<div class='container-fluid m-3'>
+    <h1 class='text-left border-bottom border-danger border-5'>Superhero List</h1>
+
+    <div class="container  mt-4 border border-4 border-danger">
+
+        <div class="accordion bg-light text-dark" id="accordionExample">
+
+            {% for hero in object_list %}
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header" id="heading-{{ hero.pk }}">
+                    <button class="accordion-button collapsed font-weight-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse-{{ hero.pk }}" aria-expanded="true"
+                        aria-controls="collapse-{{ hero.pk }}">
+                        <h2>
+                            {{ hero.name }} </h2>
+                    </button>
+                </h2>
+
+                <div id="collapse-{{ hero.pk }}" class="accordion-collapse collapse"
+                    aria-labelledby="heading-{{ hero.pk }}" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h3> Name: {{ hero.name }} </h3>
+                        <!-- <p>Identity: {{ hero.identity }} </p> -->
+                        <p><img src="{{ hero.image }}" alt="{{ hero.name }}" width=300> </p>
+                        <!-- <p>Description: {{ hero.description }}
+                        <p>Strength: {{ hero.strength }}</p>
+                        <p>Weakness: {{ hero.weakness }}</p> -->
+                        <a href=" {{ hero.pk }}" class="btn btn-primary m-2">Detail about {{hero.name}}</a>
+                        <a href="/hero/{{ hero.pk}}/" class="btn btn-info m-2">Edit</a>
+                        <a href="/hero/{{ hero.pk}}/delete" class="btn btn-danger m-2">Delete</a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+    <a href="/.." class="btn btn-success m-4 text-center">Back</a>
+</div>

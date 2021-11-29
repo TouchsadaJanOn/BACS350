@@ -1,0 +1,57 @@
+<h1>My Superhero Details</h1>
+
+
+<ul class="nav nav-tabs mt-4 ml-3" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="name-tab" data-bs-toggle="tab" role="tab" href="#name" aria-controls="name"
+            aria-selected="false">
+            <h4>Name</h4>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="identity-tab" data-bs-toggle="tab" role="tab" href="#identity" aria-controls="identity"
+            aria-selected="false">
+            <h4>Identity</h4>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="description-tab" data-bs-toggle="tab" role="tab" href="#description"
+            aria-controls="description" aria-selected="false">
+            <h4>Description</h4>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="strength-tab" data-bs-toggle="tab" role="tab" href="#strength" aria-controls="strength"
+            aria-selected="false">
+            <h4>Strength</h4>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="weakness-tab" data-bs-toggle="tab" role="tab" href="#weakness" aria-controls="weakness"
+            aria-selected="false">
+            <h4>Weakness<h4>
+        </a>
+    </li>
+</ul>
+<div class="tab-content text-light mt-4 ml-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="name" role="tabpanel" aria-labelledby="name-tab">
+        <h1 class="m-2">{{ hero.name }}</h1>
+        <img class="border boder-5 mt-2" src="{{ hero.image }}" alt="{{ hero.name }}" width=300>
+    </div>
+    <div class="tab-pane fade " id="identity" role="tabpanel" aria-labelledby="identity-tab">
+        <img class="border boder-5 mt-2" src="{{ hero.image }}" alt="{{ hero.name }}" width=300>
+        <h1>{{ hero.identity }} </h1>
+    </div>
+    <div class="tab-pane fade " id="description" role="tabpanel" aria-labelledby="description-tab">
+        <img class="border boder-5 mt-2" src="{{ hero.image }}" alt="{{ hero.name }}" width=300>
+        <h1>{{ hero.description }} </h1>
+    </div>
+    <div class="tab-pane fade" id="strength" role="tabpanel" aria-labelledby="strength-tab">
+        <img class="border boder-5 mt-2" src="{{ hero.image }}" alt="{{ hero.name }}" width=300>
+        <h1>{{ hero.strength }} </h1>
+    </div>
+    <div class="tab-pane fade" id="weakness" role="tabpanel" aria-labelledby="weakness-tab">
+        <img class="border boder-5 mt-2" src="{{ hero.image }}" alt="{{ hero.name }}" width=300>
+        <h1>{{ hero.weakness }} </h1>
+    </div>
+</div>
