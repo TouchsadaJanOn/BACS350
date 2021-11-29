@@ -1,1 +1,8 @@
-# 2 - The Spiderman Struggle
+# 6 - The Doctor Strange Struggle
+
+### Doctor Stephen Strange
+ is a fictional character appearing in American comic books published by Marvel Comics. Created by Steve Ditko with contributions by Stan Lee,[5] the character first appeared in Strange Tales #110 (cover-dated July 1963). Doctor Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. Inspired by stories of black magic and based on Chandu the Magician by Harry A. Earnshaw and Raymond R. Morgan, Strange was created during the Silver Age of Comic Books to bring a different kind of character and themes of mysticism to Marvel Comics.
+
+The character begins as an extremely talented but egotistical surgeon who loses the ability to operate after a car crash severely damages his hands beyond repair. Searching the globe for healing, he encounters the Ancient One, the Sorcerer Supreme. Strange becomes his student, and learns to be a master of both the mystical and the martial arts. He acquires an assortment of mystical objects, including the powerful Eye of Agamotto and Cloak of Levitation, and takes up residence in a mansion referred to as the Sanctum Sanctorum, located in 177A Bleecker Street, Greenwich Village, New York City. Strange assumes the title of Sorcerer Supreme and, with his friend and valet Wong, defends the world from mystical threats.
+
+The character was first portrayed in live-action by Peter Hooten in the 1978 television film Dr. Strange. Benedict Cumberbatch portrays Stephen Strange in the Marvel Cinematic Universe films Doctor Strange (2016), Thor: Ragnarok (2017), Avengers: Infinity War (2018), and Avengers: Endgame (2019). Cumberbatch reprised his role in the Disney+ animated series What If...? (2021) in an alternate timeline, and the upcoming films Spider-Man: No Way Home (2021) and Doctor Strange in the Multiverse of Madness (2022).

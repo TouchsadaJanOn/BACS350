@@ -1,4 +1,4 @@
-# 2 - The Aguaman Struggle
+# 5 - The Aguaman Struggle
 
 ### Powers and abilities
 Aquaman, as an Atlantean, was both stronger and tougher than ordinary humans and can breathe underwater as well as in the air.
